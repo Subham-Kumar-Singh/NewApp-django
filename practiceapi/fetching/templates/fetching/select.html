@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" action="{% url 'Apifetch_func' %}">
+        {% csrf_token %}
+        <input type="text" name="endpoint" placeholder="Enter API endpoint"><br><br>
+        <input type="text" name="headlines" placeholder="Enter Headlines endpoint"><br><br>
+        <input type="text" name="country" placeholder="Enter Country endpoint"><br><br>
+        <input type="text" name="source" placeholder="Enter Source endpoint"><br><br>
+        <input type="text" name="category" placeholder="Enter Category endpoint"><br><br>
+        <button type="submit">Submit</button>
+    </form>
+      
+</body>
+</html>
